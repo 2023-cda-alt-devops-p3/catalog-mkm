@@ -5,6 +5,8 @@
 }
 
 a:link, a:visited {
+    color: antiquewhite;
+    padding: 0.5rem;
     text-decoration: none;
     cursor: pointer;
 }
@@ -13,7 +15,28 @@ ul {
     list-style: none;
 }
 
+/* Navigation */
 nav {
     display: flex;
     flex-direction: column;
 }
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Page content */
+main, header {
+    margin-left: 200px;
+    padding: 1rem;
+}
+
+/* Responsive */
