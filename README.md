@@ -19,7 +19,7 @@
 - MOC (Modèle Organisationnel de Communication)
 - MLC (Modèle Logique de Communication)
 - MPC (Modèle Physique de Communication)
-- **MCD (Modèle Conceptuel de Données) ou Modèle entité-relation** 
+- **MCD (Modèle Conceptuel de Données) ou Modèle entités-relations** 
 - MOD (Modèle Organisationnel de Données)
 - **MLD (Modèle Logique de Données)**
 - MPD (Modèle Physique de Données)
