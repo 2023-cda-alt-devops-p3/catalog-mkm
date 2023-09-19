@@ -1,3 +1,5 @@
+Site déployé : https://catalogue-de-diagrammes.netlify.app/
+
 # Liste des diagrammes contenus dans le catalogue
 
 ## Diagrammes UML
