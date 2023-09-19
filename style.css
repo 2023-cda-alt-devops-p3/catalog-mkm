@@ -12,3 +12,8 @@ a:link, a:visited {
 ul {
     list-style: none;
 }
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
