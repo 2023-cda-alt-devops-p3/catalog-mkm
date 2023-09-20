@@ -15,7 +15,7 @@ a:link, a:visited {
     cursor: pointer;
 }
 
-ul {
+ul, ol {
     margin-left: 1.5rem;
 }
 
