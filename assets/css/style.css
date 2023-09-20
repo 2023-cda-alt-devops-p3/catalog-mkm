@@ -16,7 +16,7 @@ a:link, a:visited {
 }
 
 ul {
-    list-style: none;
+    margin-left: 1.5rem;
 }
 
 /* Navigation */
