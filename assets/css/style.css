@@ -30,6 +30,7 @@ nav {
     left: 0;
     background-color: #111;
     padding-top: 20px;
+    overflow: auto;
 }
 
 .sidenav a {
