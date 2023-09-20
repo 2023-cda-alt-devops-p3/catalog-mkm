@@ -1,3 +1,4 @@
+/* General setting */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,8 +7,6 @@
 }
 
 a:link, a:visited {
-    color: antiquewhite;
-    padding: 0.5rem;
     text-decoration: none;
     cursor: pointer;
 }
@@ -34,6 +33,19 @@ nav {
     padding-top: 20px;
 }
 
+.sidenav a {
+    color: #818181;
+    padding: 0.5rem;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+.sidenav-responsive{
+    display: none;
+}
+
 /* Page content */
 main, header {
     margin-left: 200px;
@@ -42,12 +54,21 @@ main, header {
 
 /* Responsive */
 
-/* @media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
+
+    /* General setting */
+    main, header {
+        margin : 1rem;
+    }
+
+    /* Navigation */
     .sidenav{
+        display: none
+    }
+    
+    .sidenav-responsive{
+        display: block;
         width: 100%;
+
     }
-    .sidenav a {
-      text-align: center;
-      float: none;
-    }
-} */
+}
