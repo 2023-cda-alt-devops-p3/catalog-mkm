@@ -72,7 +72,6 @@ main, header {
         background-color: #111;
         display: flex;
         justify-content: end;
-        
     }
 
     .sidenav-toggle {
