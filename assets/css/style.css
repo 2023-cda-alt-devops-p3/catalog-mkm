@@ -73,6 +73,18 @@ main, header {
     text-align: justify;
 }
 
+.container {
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schema {
+    width: 60%;
+}
+
 .diagrams, .models {
     margin:  6px 0 6px 0;
 }
