@@ -32,4 +32,8 @@ Site déployé : https://catalogue-de-diagrammes.netlify.app/
 - MLT (Modèle Logique de Traitement)
 - MPT (Modèle Physique de Traitement)
 
+---
+### Axes d'améliorations :
+- transformer le script qui gère les comportements de scrolling des éléments en utilisant des propriétés CSS, pour des raisons d'éco-conception
+- ajouter un niveau dans la navigation pour optimiser l'accessibilité
 
