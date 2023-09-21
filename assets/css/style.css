@@ -34,7 +34,8 @@ nav {
     left: 0;
     background-color: #111;
     padding-top: 20px;
-    overflow: auto;
+    max-height: 100vh;
+    overflow-y: auto;
 }
 
 .sidenav a {
@@ -54,6 +55,10 @@ nav {
 }
 
 /* Page content */
+body{
+    overflow: auto;
+}
+
 main, header {
     margin-left: 200px;
     padding: 1rem;

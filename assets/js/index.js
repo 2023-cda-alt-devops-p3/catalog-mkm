@@ -14,3 +14,16 @@ function closeNav() {
 // document.getElementById('Sidenav').addEventListener('scroll', () => {
 //     document.querySelector('body').style.overflow = "hidden";
 // });
+
+var navbar = document.getElementById('Sidenav');
+
+navbar.addEventListener('scroll', function () {
+  if (navbar.scrollTop + navbar.clientHeight >= navbar.scrollHeight) {
+    // Tu as atteint le bas de la barre de navigation
+    // Empêche le défilement de la page
+    document.body.style.overflow = 'hidden';
+  } else {
+    // Le défilement est autorisé sur la page
+    document.body.style.overflow = 'auto';
+  }
+});
