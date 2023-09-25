@@ -19,7 +19,7 @@ Site déployé : https://catalogue-de-diagrammes.netlify.app/
 - Diagramme d'état
 
 ## Modèles MERISE (Modèle Niveau Découpage)
-- MCC (Modèle Conceptuel de Communication)
+- **MCC (Modèle Conceptuel de Communication)**
 - MOC (Modèle Organisationnel de Communication)
 - MLC (Modèle Logique de Communication)
 - MPC (Modèle Physique de Communication)
@@ -28,7 +28,7 @@ Site déployé : https://catalogue-de-diagrammes.netlify.app/
 - **MLD (Modèle Logique de Données)**
 - MPD (Modèle Physique de Données)
 - **MCT (Modèle Conceptuel de Traitement)**
-- **MOT (Modèle Organisationnel de Traitement)**
+- MOT (Modèle Organisationnel de Traitement)
 - MLT (Modèle Logique de Traitement)
 - MPT (Modèle Physique de Traitement)
 
