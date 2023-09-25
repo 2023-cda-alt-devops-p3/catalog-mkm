@@ -1,0 +1,126 @@
+/* General setting */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+    font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0.5rem 0;
+}
+
+p {
+    padding-top: 0.5rem;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 20px;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.sidenav a {
+    color: #818181;
+    padding: 0.5rem;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.close-btn{
+    display: none;
+}
+.sidenav-responsive{
+    display: none;
+}
+
+/* Page content */
+body{
+    overflow: auto;
+}
+
+main, header {
+    margin-left: 200px;
+    padding: 1rem;
+    text-align: justify;
+}
+
+.container {
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schema {
+    width: 60%;
+}
+
+.diagrams, .models {
+    margin:  6px 0 6px 0;
+}
+
+.toggle, .close-btn {
+    color: #818181;
+    padding: 1rem;
+}
+
+.toggle:hover, .close-btn:hover  {
+    color: #f1f1f1;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 800px) {
+
+    /* General setting */
+    main, header {
+        margin : 1rem;
+    }
+
+    /* Navigation */
+    .sidenav{
+        display: none
+    }
+    
+    .sidenav-responsive{
+        display: block;
+        width: 100%;
+        background-color: #111;
+        display: flex;
+        justify-content: end;
+    }
+
+    .close-btn{
+        display: block;
+    }
+}

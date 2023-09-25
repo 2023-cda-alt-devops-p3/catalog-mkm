@@ -1,11 +1,1091 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Catalogue de diagrammes</title>
 </head>
+
 <body>
-    
+   <!-- Navigation (sidebar) -->
+    <div id="Sidenav" class="sidenav">
+        <nav>
+            <span class="close-btn" onclick="closeNav()">
+                <i class="fa-solid fa-xmark fa-lg"></i>
+                Fermer
+            </span>
+
+            <!-- Diagramme UML -->
+            <a href="#diagrams" target="_self" rel="noopener noreferrer">
+                <i class="fa-solid fa-folder fa-lg"></i>
+                Diagrammes UML
+            </a>
+
+            <!-- Diagramme de classes -->
+            <a href="#diagram-class" target="_self" rel="noopener noreferrer">
+                Diagramme de classes
+            </a>
+
+            <a href="#diagram-component" target="_self" rel="noopener noreferrer">
+                Diagramme de composants
+            </a>
+
+            <a href="#diagram-deployment" target="_self" rel="noopener noreferrer">
+                Diagramme de déploiement
+            </a>
+
+            <a href="#diagram-structure" target="_self" rel="noopener noreferrer">
+                Diagramme de structure composite
+            </a>
+
+            <a href="#diagram-object" target="_self" rel="noopener noreferrer">
+                Diagramme d'objets
+            </a>
+
+            <a href="#diagram-profil" target="_self" rel="noopener noreferrer">
+                Diagramme de profil
+            </a>
+
+            <a href="#diagram-package" target="_self" rel="noopener noreferrer">
+                Diagramme de paquetages
+            </a>
+
+            <a href="#diagram-time" target="_self" rel="noopener noreferrer">
+                Diagramme de temps
+            </a>
+
+            <a href="#diagram-interaction" target="_self" rel="noopener noreferrer">
+                Diagramme d'aperçu des interactions
+            </a>
+
+            <a href="#diagram-communication" target="_self" rel="noopener noreferrer">
+                Diagramme de communication
+            </a>
+
+            <a href="#diagram-usecase" target="_self" rel="noopener noreferrer">
+                Diagramme de cas d'utilisation
+            </a>
+
+            <a href="#diagram-sequence" target="_self" rel="noopener noreferrer">
+                Diagramme de séquence
+            </a>
+
+            <a href="#diagram-activity" target="_self" rel="noopener noreferrer">
+                Diagramme d'activités
+            </a>
+
+            <a href="#diagram-state" target="_self" rel="noopener noreferrer">
+                Diagramme d'état
+            </a>
+
+            <!-- Modèles MERISE -->
+            <a href="#models" target="_self" rel="noopener noreferrer">
+                <i class="fa-solid fa-folder fa-lg"></i>
+                Modèles MERISE
+            </a>
+
+            <a href="#model-mcc" target="_self" rel="noopener noreferrer">
+                MCC (Modèle Conceptuel de Communication)
+            </a>
+
+            <a href="#model-moc" target="_self" rel="noopener noreferrer">
+                MOC (Modèle Organisationnel de Communication)
+            </a>
+
+            <a href="#model-mlc" target="_self" rel="noopener noreferrer">
+                MLC (Modèle Logique de Communication)
+            </a>
+
+            <a href="#model-mpc" target="_self" rel="noopener noreferrer">
+                MPC (Modèle Physique de Communication)
+            </a>
+
+            <a href="#model-mcd" target="_self" rel="noopener noreferrer">
+                MCD (Modèle Conceptuel de Données)
+            </a>
+
+            <a href="#model-mod" target="_self" rel="noopener noreferrer">
+                MOD (Modèle Organisationnel de Données)
+            </a>
+
+            <a href="#model-mld" target="_self" rel="noopener noreferrer">
+                MLD (Modèle Logique de Données)
+            </a>
+
+            <a href="#model-mpd" target="_self" rel="noopener noreferrer">
+                MPD (Modèle Physique de Données)
+            </a>
+
+            <a href="#model-mct" target="_self" rel="noopener noreferrer">
+                MCT (Modèle Conceptuel de Traitement)
+            </a>
+
+            <a href="#model-mot" target="_self" rel="noopener noreferrer">
+                MOT (Modèle Organisationnel de Traitement)
+            </a>
+
+            <a href="#model-mlt" target="_self" rel="noopener noreferrer">
+                MLT (Modèle Logique de Traitement)
+            </a>
+
+            <a href="#model-mpt" target="_self" rel="noopener noreferrer">
+                MPT (Modèle Physique de Traitement)
+            </a>            
+        </nav>
+    </div>
+
+    <!-- Responsive Navigation -->
+    <div class="sidenav-responsive">
+        <span class="toggle" onclick="openNav()">
+            <i class="fa-solid fa-bars fa-lg"></i>
+            Menu
+        </span>
+    </div>
+
+    <header>
+        <!-- Introduction -->
+        <h1>Bienvenue sur le catalogue de diagrammes</h1>
+        <p>Ce catalogue contient l'ensemble des diagrammes UML ainsi que les modèles utilisant la méthode MERISE.</p>
+    </header>
+
+    <main>
+        <!-- Diagrammes UML -->
+        <section id="diagrams">
+            <h2>Diagrammes UML</h2>
+
+            <p>
+                Un diagramme UML  (Unified Modeling Language) est un moyen de représenter visuellement l'architecture, la conception et la mise en œuvre de systèmes logiciels complexes. Le langage UML (Unified Modeling Language) est un langage de modélisation général qui fournit une notation standard pour de nombreux types de diagrammes, qui peuvent être divisés en trois groupes principaux : les diagrammes de comportement, les diagrammes d'interaction et les diagrammes de structure.
+                Les diagrammes UML sont utilisés pour décrire la structure d'un système particulier en modélisant ses classes, ses attributs, ses opérations et les relations entre ses objets.
+            </p>
+
+            <!-- Diagramme de classes -->
+            <div id="diagram-class" class="diagrams">
+                <h3>Diagramme de classes</h3>
+                <p>
+                    Un diagramme de classes est un diagramme qui représente les classes et les relations entre les classes d'un système logiciel.
+                    Il est utilisé pour modéliser la structure statique d'un système, en montrant les classes, les attributs, les méthodes et les relations entre les classes.
+                    Les diagrammes de classes sont souvent utilisés dans la phase de conception d'un système logiciel pour décrire la structure de l'application et les relations entre les différents composants.
+                </p>
+                <br>
+                <p>
+                    Dans ce diagramme, les classes sont divisées en trois compartiments contenus dans une boîte :
+                    <ul>
+                        <li>le nom doit être en haut,</li>
+                        <li>les attributs au milieu,</li>
+                        <li>et les opérations (méthodes) en bas, affichées sous forme de liste. Chaque opération occupe sa propre ligne. Les opérations décrivent la manière dont une classe interagit avec les données.</li>
+                    </ul>
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme de classes en UML, vous pouvez suivre les étapes suivantes :
+                    <ol>
+                        <li>
+                            Identifier les classes : commencez par identifier les différentes classes qui composent votre système. Ces classes peuvent inclure des objets, des entités, des interfaces, des contrôleurs, etc.
+                        </li>
+                        <li>
+                            Définir les attributs : pour chaque classe, définissez les attributs qu'elle possède. Les attributs peuvent inclure des variables, des propriétés, des constantes, etc.
+                        </li>
+                        <li>
+                            Définir les méthodes : pour chaque classe, définissez les méthodes qu'elle expose. Les méthodes peuvent inclure des fonctions, des procédures, des événements, etc.
+                        </li>
+                        <li>
+                            Identifier les relations : identifiez les relations entre les différentes classes. Les relations peuvent être de différents types, tels que les relations d'agrégation, les relations de composition, les relations d'héritage, etc.
+                        </li>
+                        <li>
+                            Créer le diagramme : une fois que vous avez identifié les classes, les attributs, les méthodes et les relations, vous pouvez créer le diagramme de classes en utilisant les symboles UML appropriés. Les symboles UML couramment utilisés pour les diagrammes de classes comprennent les classes, les attributs, les méthodes, les relations, les interfaces, les packages, etc.
+                        </li>
+                    </ol>
+
+                </p>
+            </div>
+
+            <!-- Diagramme de composants -->
+            <div id="diagram-component" class="diagrams">
+                <h3>Diagramme de composants</h3>
+                <p>
+                    Un diagramme de composants est un type de diagramme UML qui montre la structure d'un système en illustrant les composants qui composent ce système et les relations entre ces composants.
+                    Il est utilisé pour modéliser les composants physiques d'un système, tels que les bibliothèques, les exécutables, les fichiers et les bases de données, ainsi que les dépendances entre ces composants.
+                    Un diagramme de composants peut être utilisé pour montrer comment les différentes parties d'un système interagissent les unes avec les autres et comment les modifications apportées à un composant peuvent affecter d'autres composants.
+                    Il peut également être utilisé pour montrer comment un système est déployé sur différentes plates-formes matérielles et logicielles.
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme de composants en UML, vous pouvez suivre les étapes suivantes :
+                    <ol>
+                        <li>
+                            Identifier les composants du système : commencez par identifier les différents composants qui composent votre système. Ces composants peuvent inclure des bibliothèques, des modules, des bases de données, des serveurs, des interfaces utilisateur, etc.
+                        </li>
+                        <li>
+                            Définir les interfaces : pour chaque composant, définissez les interfaces qu'il expose. Les interfaces peuvent inclure des méthodes, des propriétés, des événements, etc.
+                        </li>
+                        <li>
+                            Identifier les dépendances : identifiez les dépendances entre les différents composants. Les dépendances peuvent être de différents types, tels que les dépendances de compilation, les dépendances d'exécution, les dépendances de déploiement, etc.
+                        </li>
+                        <li>
+                            Créer le diagramme : une fois que vous avez identifié les composants, les interfaces et les dépendances, vous pouvez créer le diagramme de composants en utilisant les symboles UML appropriés.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+
+            <!-- Diagramme de déploiement -->
+            <div id="diagram-deployment" class="diagrams">
+                <h3>Diagramme de déploiement</h3>
+                <p>
+                    Un diagramme de déploiement montre la disposition physique des composants matériels et logiciels qui composent un système, ainsi que la distribution de ces composants sur différents nœuds.
+                    Il est utilisé pour modéliser le déploiement de composants logiciels dans un système distribué et pour visualiser les relations entre les composants et les nœuds sur lesquels ils sont déployés.
+                </p>
+                <p>
+                    Dans un diagramme de déploiement, les nœuds représentent les environnements d'exécution matérielle ou logicielle dans lesquels les composants sont déployés, tandis que les composants représentent les artefacts logiciels déployés sur ces nœuds.
+                    Les connexions entre les nœuds et les composants montrent les relations de déploiement entre eux, telles que les composants déployés sur quels nœuds et la manière dont ils interagissent les uns avec les autres.
+                </p>
+                <p>
+                    Les diagrammes de déploiement sont utiles pour comprendre l'architecture physique d'un système et pour identifier les problèmes de déploiement potentiels, tels que les conflits de ressources ou les goulots d'étranglement des performances.
+                    Ils sont couramment utilisés dans le développement de logiciels pour aider les architectes et les développeurs à planifier le déploiement de systèmes logiciels.
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme de déploiement en UML, procédez comme suit :
+                    <ol>
+                        <li>
+                            Identifiez les composants matériels et logiciels qui composent votre système.
+                        </li>
+                        <li>
+                            Déterminez les nœuds sur lesquels ces composants seront déployés.
+                        </li>
+                        <li>
+                            Créez un diagramme de déploiement dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez des nœuds au diagramme, représentant les environnements d'exécution matérielle ou logicielle.
+                        </li>
+                        <li>
+                            Ajoutez des composants au diagramme, représentant les artefacts logiciels qui seront déployés sur les nœuds.
+                        </li>
+                        <li>
+                            Connectez les nœuds et les composants avec des relations de déploiement, telles que « déployé sur » ou « s'exécute sur ».
+                        </li>
+                        <li>
+                            Ajoutez toutes les annotations ou notes nécessaires au diagramme pour fournir un contexte ou des informations supplémentaires.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+
+            <!-- Diagramme de structure composite -->
+            <div id="diagram-structure" class="diagrams">
+                <h3>Diagramme de structure composite</h3>
+                <p>
+                    Un diagramme de structure composite est un type de diagramme qui montre la structure interne d'une classe ou d'un composant, y compris ses pièces, ports et connecteurs.
+                    Il est utilisé pour modéliser la structure interne d'objets ou de composants complexes qui ont une structure hiérarchique, comme un système informatique ou une machine complexe.
+                </p>
+                <p>
+                    Un diagramme de structure composite permet aux utilisateurs de déterminer précisément ce qui est contenu dans un objet, en spécifiant la manière dont différentes propriétés interagissent pour produire un certain comportement.
+                    Les différentes relations au sein d'un système logiciel complexe peuvent être difficiles à appréhender, mais la décomposition des fonctionnalités peut fournir des informations précieuses sur la manière dont les structures sont interconnectées, dont les informations sont communiquées, etc.
+                </p>
+                <br>
+                <p>
+                    Un diagramme de structure composite offre également les avantages suivants :
+                    <ul>
+                        <li>
+                            Il aide les utilisateurs à comprendre l'état actuel de leur système.
+                        </li>
+                        <li>
+                            Il décompose la structure interne de plusieurs classes, interfaces ou composants, et leurs interactions.
+                        </li>
+                        <li>
+                            Il détaille les architectures d'exécution et les modèles d'utilisation que les diagrammes statiques ne peuvent pas représenter.
+                        </li>
+                        <li>
+                            Il fournit aux utilisateurs des informations pour optimiser et dépanner leur système.
+                        </li>
+                    </ul>
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme de structure composite en UML, vous pouvez suivre ces étapes :
+                    <ol>
+                        <li>
+                            Identifiez la classe ou le composant pour lequel vous souhaitez créer un diagramme de structure composite.
+                        </li>
+                        <li>
+                            Déterminez la structure interne de la classe ou du composant, y compris ses pièces, ports et connecteurs.
+                        </li>
+                        <li>
+                            Créez un diagramme de structure composite dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez la classe ou le composant au diagramme.
+                        </li>
+                        <li>
+                            Ajoutez les parties internes de la classe ou du composant au diagramme, en utilisant la notation appropriée pour chaque type de pièce (par exemple, rectangle pour une classe, cercle pour un port).
+                        </li>
+                        <li>
+                            Connectez les parties de la classe ou du composant aux connecteurs, en utilisant la notation appropriée pour chaque type de connecteur (par exemple, ligne continue pour une relation de composition, ligne pointillée pour une relation d'association).
+                        </li>
+                        <li>
+                            Ajoutez toutes les annotations ou notes nécessaires au diagramme pour fournir un contexte ou des informations supplémentaires.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+
+            <!-- Diagramme d'objets -->
+            <div id="diagram-object" class="diagrams">
+                <h3>Diagramme d'objets</h3>
+                <p>
+                    Un diagramme d'objets est un type de diagramme qui affiche un instantané des objets d'un système et de leurs relations à un moment donné.
+                    Il est utilisé pour modéliser les instances de classes dans un système et pour visualiser les relations entre ces instances.
+                </p>
+                <p>
+                    Dans un diagramme d'objets, les objets représentent les instances des classes d'un système, tandis que les liens représentent les relations entre ces objets.
+                    L'état de chaque objet est indiqué dans le diagramme, y compris ses attributs et ses valeurs.
+                </p>
+                <p>
+                    Les diagrammes d'objets sont utiles pour comprendre les relations entre les objets d'un système et pour identifier les problèmes de conception potentiels, tels que les dépendances et les interactions des objets.
+                </p>
+                <br>
+                <p>
+                    La création d'un diagramme d'objets en UML implique les étapes suivantes :
+                    <ol>
+                        <li>
+                            Identifiez les classes et les objets que vous souhaitez inclure dans le diagramme.                            
+                        </li>
+                        <li>
+                            Déterminez les relations entre les objets, telles que les associations, les agrégations et les compositions.
+                        </li>
+                        <li>
+                            Créez un diagramme d'objets dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez les objets au diagramme, en utilisant la notation appropriée pour chaque type d'objet (par exemple, rectangle pour une classe, cercle pour un objet).
+                        </li>
+                        <li>
+                            Connectez les objets avec des liens, en utilisant la notation appropriée pour chaque type de relation (par exemple, ligne continue pour une association, losange pour une agrégation).
+                        </li>
+                        <li>
+                            Ajoutez toutes les annotations ou notes nécessaires au diagramme pour fournir un contexte ou des informations supplémentaires.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+
+            <!-- Diagramme de profil -->
+            <div id="diagram-profil" class="diagrams">
+                <h3>Diagramme de profil</h3>
+                <p>
+                    Un diagramme de profil est utilisé pour définir et étendre les éléments et les constructions de modélisation UML.
+                    Il est utilisé pour créer des profils personnalisés qui peuvent être utilisés pour étendre le métamodèle UML avec de nouveaux concepts de modélisation, notations et sémantique.
+                </p>
+                <p>
+                    Dans un diagramme de profil, les stéréotypes sont utilisés pour définir de nouveaux éléments et constructions de modélisation, tels que de nouvelles classes, interfaces et relations.
+                    Les valeurs balisées peuvent être utilisées pour ajouter de nouvelles propriétés et attributs aux éléments de modélisation existants.
+                    Les contraintes peuvent être utilisées pour spécifier des règles et des exigences supplémentaires pour les éléments de modélisation.
+                </p>
+                <p>
+                    Les diagrammes de profil sont utiles pour créer des langages de modélisation spécifiques au domaine et pour étendre le métamodèle UML afin de prendre en charge de nouveaux concepts et notations de modélisation.
+                    Ils sont couramment utilisés dans le développement de logiciels pour aider les architectes et les développeurs à créer des langages de modélisation personnalisés adaptés aux besoins d'un domaine ou d'une application spécifique.
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme de profil en UML, procédez comme suit :
+                    <ol>
+                        <li>
+                            Identifiez les éléments de modélisation et les constructions que vous souhaitez définir ou étendre dans le profil.                            
+                        </li>
+                        <li>
+                            Déterminez les stéréotypes, les valeurs balisées et les contraintes dont vous aurez besoin pour définir ces éléments et constructions de modélisation.
+                        </li>
+                        <li>
+                            Créez un diagramme de profil dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez les stéréotypes, les valeurs balisées et les contraintes au diagramme, en utilisant la notation appropriée pour chaque type d'élément.
+                        </li>
+                        <li>
+                            Connectez les éléments aux relations, en utilisant la notation appropriée pour chaque type de relation.
+                        </li>
+                        <li>
+                            Enregistrez le diagramme de profil en tant que fichier séparé, à l'aide de l'extension.profile.
+                        </li>
+                        <li>
+                            Appliquez le profil à vos modèles UML, à l'aide de la fonction « Appliquer le profil » de votre outil de modélisation UML.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+
+            <!-- Diagramme de paquetages -->
+            <div id="diagram-package" class="diagrams">
+                <h3>Diagramme de paquetages</h3>
+                <p>
+                    Un diagramme de package est un type de diagramme utilisé pour organiser et structurer des modèles UML en groupes logiques ou packages.
+                    Il est utilisé pour afficher les dépendances et les relations entre les packages, ainsi que le contenu de chaque package.
+                </p>
+                <p>
+                    Dans un diagramme de package, les packages sont représentés sous forme de rectangles, avec le nom du package en haut et le contenu du package répertorié dessous.
+                    Les dépendances entre les packages sont affichées par des flèches, indiquant quels packages dépendent de quels autres packages.
+                </p>
+                <p>
+                    Les diagrammes de package sont utiles pour comprendre l'organisation et la structure d'un système et pour identifier les problèmes de conception potentiels, tels que les dépendances circulaires ou le couplage de packages.
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme de package en UML, procédez comme suit :
+                    <ol>
+                        <li>
+                            Identifiez les packages que vous souhaitez inclure dans le diagramme.                            
+                        </li>
+                        <li>
+                            Déterminez les dépendances et les relations entre les packages.
+                        </li>
+                        <li>
+                            Créez un diagramme de package dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez les packages au diagramme, en utilisant la notation appropriée pour chaque package (par exemple, rectangle avec le nom du package en haut).
+                        </li>
+                        <li>
+                            Connectez les packages avec des dépendances et des relations, en utilisant la notation appropriée pour chaque type de relation (par exemple, flèche pointant du package dépendant vers le package dont il dépend).
+                        </li>
+                        <li>
+                            Ajoutez toutes les annotations ou notes nécessaires au diagramme pour fournir un contexte ou des informations supplémentaires.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+
+            <!-- Diagramme de temps -->
+            <div id="diagram-time" class="diagrams">
+                <h3>Diagramme de temps</h3>
+                <p>
+                    Un diagramme de temps est utilisé pour modéliser le comportement d'un système au fil du temps.
+                    Il est utilisé pour montrer les contraintes temporelles et les interactions entre les objets d'un système, ainsi que la séquence d'événements qui se produisent au cours d'un scénario ou d'un cas d'utilisation particulier.
+                </p>
+                <p>
+                    Dans un diagramme temporel, le temps est représenté sur l'axe horizontal, tandis que les objets et les événements sont représentés sur l'axe vertical.
+                    Les lignes de vie sont utilisées pour représenter les objets dans le système, tandis que les messages et les interactions sont utilisés pour montrer la communication et la synchronisation entre les objets.
+                    Les contraintes temporelles, telles que les retards et les durées, peuvent également être indiquées sur le diagramme.
+                </p>
+                <p>
+                    Les diagrammes de synchronisation sont utiles pour comprendre le comportement de synchronisation d'un système et pour identifier les problèmes de conception potentiels, tels que les problèmes de synchronisation ou les goulots d'étranglement des performances.
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme de minutage en UML, procédez comme suit :
+                    <ol>
+                        <li>
+                            Identifiez les objets et les événements que vous souhaitez inclure dans le diagramme.
+                        </li>
+                        <li>
+                            Déterminez les contraintes de temps et les interactions entre les objets, telles que la transmission de messages, l'envoi de signaux et les transitions d'état.
+                        </li>
+                        <li>
+                            Créez un diagramme de temps dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez les lignes de vie au diagramme, représentant les objets dans le système.
+                        </li>
+                        <li>
+                            Ajoutez les messages et les interactions au diagramme, en montrant la communication et la synchronisation entre les objets.
+                        </li>
+                        <li>
+                            Ajoutez toutes les contraintes de temps nécessaires, telles que les retards et les durées, au diagramme.
+                        </li>
+                        <li>
+                            Personnalisez l'apparence et la mise en page du diagramme selon vos besoins.
+                        </li>
+                        <li>
+                            Enregistrez le diagramme de minutage dans un fichier séparé, à l'aide de l'extension .timing.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+
+            <!-- Diagramme d'aperçu des interactions -->
+            <div id="diagram-interaction" class="diagrams">
+                <h3>Diagramme d'aperçu des interactions</h3>
+                <p>
+                    Un diagramme d'aperçu des interactions est un type de diagramme qui fournit une vue d'ensemble du flux de contrôle entre les objets ou les composants d'un système.
+                    Le diagramme montre les interactions entre les objets ou les composants dans une vue de haut niveau, ce qui facilite la compréhension du comportement global du système.
+                    Le diagramme d'aperçu des interactions est utile pour modéliser des systèmes complexes avec plusieurs chemins de flux de contrôle et peut être utilisé pour décrire les aspects statiques et dynamiques d'un système.
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme d'aperçu des interactions, procédez comme suit :
+                    <ol>
+                        <li>
+                            Identifiez les interactions que vous souhaitez inclure dans le diagramme.
+                        </li>
+                        <li>
+                            Déterminez la séquence des interactions et les conditions dans lesquelles elles se produisent.
+                        </li>
+                        <li>
+                            Créez un diagramme de vue d'ensemble de l'interaction dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez les interactions au diagramme en utilisant la notation appropriée pour chaque type d'interaction (par exemple, rectangle pour une activité, losange pour un point de décision).
+                        </li>
+                        <li>
+                            Connectez les interactions avec les flux de contrôle, en utilisant la notation appropriée pour chaque type de flux (par exemple, ligne continue pour un flux normal, ligne pointillée pour un flux d'exception).
+                        </li>
+                        <li>
+                            Ajoutez toutes les annotations ou notes nécessaires au diagramme pour fournir un contexte ou des informations supplémentaires.
+                        </li>
+                    </ol>
+                </p>
+                <br>
+                <p>
+                    Les diagrammes d'aperçu des interactions sont utiles pour modéliser des interactions complexes entre des objets ou des composants d'un système et pour identifier les problèmes de conception potentiels, tels que les goulots d'étranglement des performances ou les problèmes de synchronisation.
+                </p>
+            </div>
+
+            <!-- Diagramme de communication -->
+            <div id="diagram-communication" class="diagrams">
+                <h3>Diagramme de communication</h3>
+                <p>
+                    Un diagramme de communication est un type de diagramme qui montre les interactions entre les objets ou les composants d'un système, en mettant l'accent sur les messages échangés entre eux.
+                    Il est utilisé pour modéliser le comportement dynamique d'un système et pour visualiser le flux de messages entre les objets ou les composants au cours d'un scénario ou d'un cas d'utilisation particulier.
+                </p>
+                <p>
+                    Dans un diagramme de communication, les objets ou les composants sont représentés sous forme de lignes de vie, tandis que les messages sont représentés par des flèches entre les lignes de vie.
+                    La séquence des messages est représentée sur le diagramme, avec la position verticale des flèches indiquant l'ordre dans lequel les messages sont envoyés et reçus.
+                </p>
+                <p>
+                    Les diagrammes de communication sont utiles pour comprendre les interactions entre les objets ou les composants d'un système et pour identifier les problèmes de conception potentiels, tels que les problèmes de transmission de messages ou de synchronisation.
+                    Ils sont couramment utilisés dans le développement de logiciels pour aider les architectes et les développeurs à planifier le comportement des systèmes logiciels.
+                </p>
+                <p>
+                    Voici quelques-unes des principales caractéristiques des diagrammes de communication :
+                    <ul>
+                        <li>
+                            Lignes de vie : représentation des objets ou des composants du système.                            
+                        </li>
+                        <li>
+                            Messages : représente les interactions entre les objets ou les composants.
+                        </li>
+                        <li>
+                            Flèches : affiche la séquence des messages et la direction de transmission des messages.
+                        </li>
+                        <li>
+                            Barres d'activation : indique la durée de l'activité d'un objet ou d'un composant pendant le scénario ou le cas d'utilisation.
+                        </li>
+                    </ul>
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme de communication en UML, procédez comme suit :
+                    <ol>
+                        <li>
+                            Identifiez les objets ou composants que vous souhaitez inclure dans le diagramme.
+                        </li>
+                        <li>
+                            Déterminez les interactions entre les objets ou les composants, y compris les messages échangés.
+                        </li>
+                        <li>
+                            Créez un diagramme de communication dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez les lignes de vie au diagramme, représentant les objets ou les composants du système.
+                        </li>
+                        <li>
+                            Ajoutez les messages au diagramme, montrant les interactions entre les objets ou les composants.
+                        </li>
+                        <li>
+                            Personnalisez l'apparence et la mise en page du diagramme selon vos besoins.
+                        </li>
+                        <li>
+                            Enregistrez le diagramme de communication en tant que fichier séparé, à l'aide de l'extension .communication.
+                        </li>
+                    </ol>
+                </p>
+                <br>
+                <p>
+                    Voici quelques conseils supplémentaires pour créer un diagramme de communication en UML :
+                    <ul>
+                        <li>
+                            Utilisez des étiquettes claires et concises pour les lignes de vie et les messages.
+                        </li>
+                        <li>
+                            Utilisez différentes couleurs ou styles de ligne pour différencier les différents types de messages ou d'interactions.
+                        </li>
+                        <li>
+                            Utilisez des barres d'activation pour indiquer la durée de l'activité d'un objet ou d'un composant pendant le scénario ou le cas d'utilisation.
+                        </li>
+                        <li>
+                            Utilisez des messages automatiques pour afficher quand un objet ou un composant s'envoie un message à lui-même.
+                        </li>
+                        <li>
+                            Utilisez des notes ou des annotations pour fournir un contexte ou des informations supplémentaires sur les interactions ou les messages.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <!-- Diagramme de cas d'utilisation -->
+            <div id="diagram-usecase" class="diagrams">
+                <h3>Diagramme de cas d'utilisation</h3>
+                <p>
+                    Un diagramme de cas d'utilisation montre les interactions entre les acteurs (utilisateurs) et un système, en mettant l'accent sur les objectifs ou les tâches que les acteurs veulent accomplir.
+                    Il est utilisé pour modéliser les exigences fonctionnelles d'un système et visualiser les relations entre les acteurs et les cas d'utilisation.
+                </p>
+                <p>
+                    Dans un diagramme de cas d'utilisation, les acteurs sont représentés sous forme de figurines, tandis que les cas d'utilisation sont représentés sous forme d'ovales.
+                    Les relations entre les acteurs et les cas d'utilisation sont indiquées par des lignes, indiquant quels acteurs sont impliqués dans quels cas d'utilisation.
+                </p>
+                <br>
+                <p>
+                    Voici quelques fonctionnalités clés des diagrammes de cas d'utilisation :
+                    <ul>
+                        <li>
+                            Acteurs : Représenter les utilisateurs ou les systèmes externes qui interagissent avec le système.
+                        </li>
+                        <li>
+                            Cas d'utilisation : Représenter les tâches ou les objectifs que les acteurs veulent accomplir.
+                        </li>
+                        <li>
+                            Relations : Montrer les interactions entre les acteurs et les cas d'utilisation.
+                        </li>
+                        <li>
+                            Limites du système : Indiquer la portée du système modélisé.
+                        </li>
+                    </ul>
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme de cas d'utilisation en UML, vous pouvez suivre ces étapes :
+                    <ol>
+                        <li>
+                            Identifiez les acteurs (utilisateurs) et les tâches ou objectifs qu'ils veulent accomplir dans le système.
+                        </li>
+                        <li>
+                            Déterminer les relations entre les acteurs et les tâches ou les objectifs.
+                        </li>
+                        <li>
+                            Créez un nouveau diagramme de cas d'utilisation dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez les acteurs au diagramme, en utilisant la notation de figure de bâton.
+                        </li>
+                        <li>
+                            Ajoutez les cas d'utilisation au diagramme, en utilisant la notation ovale.
+                        </li>
+                        <li>
+                            Connectez les acteurs et les cas d'utilisation avec des lignes, indiquant quels acteurs sont impliqués dans quels cas d'utilisation.
+                        </li>
+                        <li>
+                            Personnalisez l'apparence et la mise en page du diagramme selon vos besoins.
+                        </li>
+                        <li>
+                            Enregistrez le diagramme de cas d'utilisation en tant que fichier séparé, à l'aide de l'extension.usecase.
+                        </li>
+                    </ol>
+                </p>
+
+                <p>
+                    Voici quelques conseils supplémentaires pour créer un diagramme de cas d'utilisation en UML :
+                    <ul>
+                        <li>
+                            Utilisez des étiquettes claires et concises pour les acteurs et les cas d'utilisation.
+                        </li>
+                        <li>
+                            Utilisez différentes couleurs ou styles de ligne pour différencier différents types de relations.
+                        </li>
+                        <li>
+                            Utilisez des notes ou des annotations pour fournir un contexte ou des informations supplémentaires sur les acteurs ou les cas d'utilisation.
+                        </li>
+                        <li>
+                            Regroupez les cas d'utilisation connexes pour rendre le diagramme plus facile à lire et à comprendre.
+                        </li>
+                        <li>
+                            Utilisez les limites du système pour indiquer la portée du système modélisé.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <!-- Diagramme de séquence -->
+            <div id="diagram-sequence" class="diagrams">
+                <h3>Diagramme de séquence</h3>
+                <p>
+                    Un diagramme de séquence montre les interactions entre les objets ou les composants d'un système, en mettant l'accent sur la séquence des messages échangés entre eux.
+                    Il est utilisé pour modéliser le comportement dynamique d'un système et pour visualiser le flux de messages entre les objets ou les composants au cours d'un scénario ou d'un cas d'utilisation particulier.
+                </p>
+                <p>
+                    Dans un diagramme de séquence, les objets ou les composants sont représentés sous forme de lignes de vie, tandis que les messages sont représentés sous forme de flèches entre les lignes de vie.
+                    La séquence des messages est représentée sur le diagramme, avec la position verticale des flèches indiquant l'ordre dans lequel les messages sont envoyés et reçus.
+                </p>
+                <p>
+                    La différence entre le diagramme de séquence et le diagramme de communication, est que le diagramme de séquence met l'accent sur le temps dans sa mise en page alors que le diagramme de communication met l'accent sur les objets qui communiquent dans sa mise en page.
+                </p>
+                <p>
+                    Voici quelques caractéristiques clés des diagrammes de séquence :
+                    <ul>
+                        <li>
+                            Lignes de vie : représentation des objets ou des composants du système.
+                        </li>
+                        <li>
+                            Messages : représente les interactions entre les objets ou les composants.
+                        </li>
+                        <li>
+                            Flèches : affiche la séquence des messages et la direction de transmission des messages.
+                        </li>
+                        <li>
+                            Barres d'activation : indique la durée de l'activité d'un objet ou d'un composant pendant le scénario ou le cas d'utilisation.
+                        </li>
+                    </ul>
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme de séquence dans UML, procédez comme suit :
+                    <ol>
+                        <li>
+                            Identifiez les objets ou composants que vous souhaitez inclure dans le diagramme.
+                        </li>
+                        <li>
+                            Déterminez la séquence des messages et les conditions dans lesquelles ils se produisent.
+                        </li>
+                        <li>
+                            Créez un diagramme de séquence dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez les lignes de vie au diagramme, représentant les objets ou les composants du système.
+                        </li>
+                        <li>
+                            Ajoutez les messages au diagramme, montrant les interactions entre les objets ou les composants.
+                        </li>
+                        <li>
+                            Personnalisez l'apparence et la mise en page du diagramme selon vos besoins.
+                        </li>
+                        <li>
+                            Enregistrez le diagramme de séquence en tant que fichier séparé, à l'aide de l'extension .sequence.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+
+            <!-- Diagramme d'activités -->
+            <div id="diagram-activity" class="diagrams">
+                <h3>Diagramme d'activités</h3>
+                <p>
+                    Un diagramme d'activités montre le flux d'activités et d'actions dans un système, en mettant l'accent sur la séquence des actions et les conditions dans lesquelles elles se produisent.
+                    Il est utilisé pour modéliser le comportement d'un système et pour visualiser le flux d'activités et d'actions au cours d'un scénario ou d'un cas d'utilisation particulier.
+                </p>
+                <p>
+                    Dans un diagramme d'activités, les activités et les actions sont représentées sous forme de nœuds, tandis que les transitions entre elles sont représentées sous forme de flèches.
+                    La séquence des activités et des actions est représentée sur le diagramme, la position verticale des nœuds indiquant l'ordre dans lequel les activités et les actions sont effectuées.
+                </p>
+                <p>
+                    Voici quelques-unes des principales caractéristiques des diagrammes d'activités :
+                    <ul>
+                        <li>
+                            Nœuds : représente les activités et les actions dans le système.
+                        </li>
+                        <li>
+                            Flèches : montrant les transitions entre les activités et les actions.
+                        </li>
+                        <li>
+                            Points de décision : indiquqnt les conditions dans lesquelles certaines actions sont effectuées.
+                        </li>
+                        <li>
+                            Forks et jointures : indiquant des activités parallèles ou simultanées.
+                        </li>
+                    </ul>
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme d'activités dans UML, procédez comme suit :
+                    <ol>
+                        <li>
+                            Identifiez les activités et les actions que vous souhaitez inclure dans le diagramme.
+                        </li>
+                        <li>
+                            Déterminez la séquence des activités et des actions, y compris les conditions dans lesquelles elles se produisent.
+                        </li>
+                        <li>
+                            Créez un diagramme d'activités dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez les nœuds au diagramme, représentant les activités et les actions dans le système.
+                        </li>
+                        <li>
+                            Ajoutez les flèches au diagramme, montrant les transitions entre les activités et les actions.
+                        </li>
+                        <li>
+                            Personnalisez l'apparence et la mise en page du diagramme selon vos besoins.
+                        </li>
+                        <li>
+                            Enregistrez le diagramme d'activités dans un fichier séparé, à l'aide de l'extension .activity.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+
+            <!-- Diagramme d'état -->
+            <div id="diagram-state" class="diagrams">
+                <h3>Diagramme d'état</h3>
+                <p>
+                    Un diagramme d'état est un type de diagramme qui montre les différents états d'un objet ou d'un composant dans un système et les transitions entre ces états.
+                    Il est utilisé pour modéliser le comportement d'un système et pour visualiser les changements d'état qui se produisent au cours d'un scénario ou d'un cas d'utilisation particulier.
+                </p>
+                <p>
+                    Dans un diagramme d'états, les états sont représentés sous forme de nœuds, tandis que les transitions entre les états sont représentées sous forme de flèches.
+                    Les conditions dans lesquelles les transitions se produisent sont indiquées sur le diagramme, la position verticale des flèches indiquant l'ordre dans lequel les transitions se produisent.
+                </p>
+                <p>
+                    Certaines des principales caractéristiques des diagrammes d'état incluent:
+                    <ul>
+                        <li>
+                            Nœuds : représente les états d'un objet ou d'un composant dans le système.
+                        </li>
+                        <li>
+                            Flèches : montrant les transitions entre les états.
+                        </li>
+                        <li>
+                            Conditions : indiquant les conditions dans lesquelles les transitions se produisent.
+                        </li>
+                        <li>
+                            Actions d'entrée et de sortie : indique les actions effectuées lors de l'entrée ou de la sortie d'un état.
+                        </li>
+                    </ul>
+                </p>
+                <br>
+                <p>
+                    Pour créer un diagramme d'état dans UML, vous pouvez suivre ces étapes :
+                    <ol>
+                        <li>
+                            Identifiez les états que vous souhaitez inclure dans le diagramme.
+                        </li>
+                        <li>
+                            Déterminez les transitions entre les états et les conditions dans lesquelles elles se produisent.
+                        </li>
+                        <li>
+                            Créez un diagramme d'état dans votre outil de modélisation UML.
+                        </li>
+                        <li>
+                            Ajoutez les nœuds au diagramme, représentant les états de l'objet ou du composant dans le système.
+                        </li>
+                        <li>
+                            Ajoutez les flèches au diagramme, montrant les transitions entre les états.
+                        </li>
+                        <li>
+                            Personnalisez l'apparence et la mise en page du diagramme selon vos besoins.
+                        </li>
+                        <li>
+                            Enregistrez le diagramme d'état en tant que fichier séparé, à l'aide de l'extension .state.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+        </section>
+
+        <!-- Modèles MERISE -->
+        <section id="models">
+            <h2>Modèles MERISE</h2>
+
+            <p>
+                La méthode MERISE (Méthode d'étude et de réalisation informatique pour les systèmes d'entreprise) est une méthode de conception, de développement et de réalisation de projets informatiques.
+                Le but de cette méthode est d'arriver à concevoir un système d'information.
+                La méthode MERISE est basée sur la séparation des données et des traitements à effectuer en plusieurs modèles conceptuels et physiques.
+                La séparation des données et des traitements assure une longévité au modèle.
+                En effet, l'agencement des données n'a pas à être souvent remanié, tandis que les traitements le sont plus fréquemment.
+            </p>
+            <p>
+                La méthode MERISE repose sur trois concepts principaux :
+                <ul>
+                    <li>
+                        Le modèle conceptuel : Il s'agit d'une représentation de haut niveau du système d'information, montrant les principales entités, relations et attributs impliqués.                        
+                    </li>
+                    <li>
+                        Le modèle organisationnel : Il s'agit d'une représentation plus détaillée du système d'information, montrant les différents processus, flux de données et magasins de données impliqués.
+                    </li>
+                    <li>
+                        Le modèle physique: Il s'agit d'une représentation détaillée du système d'information, montrant les structures de données, les tables et les champs spécifiques impliqués.
+                    </li>
+                </ul>
+            </p>
+
+            <!-- MCC -->
+            <div id="model-mcc" class="models">
+                <h3>MCC (Modèle Conceptuel de Communication)</h3>
+                <p>
+                    Le MCC est utilisé pour modéliser la communication entre différents processus ou composants d'un système d'information.
+                    Il s'agit d'un modèle conceptuel qui montre les différents processus ou composants impliqués dans le système, ainsi que les flux de données et les canaux de communication entre eux.
+                    Le MCC est utilisé pour identifier les besoins de communication du système et pour concevoir les canaux et protocoles de communication qui seront utilisés pour transférer les données entre les différents processus ou composants.
+                    C'est un élément important de la méthode MERISE, car il permet de s'assurer que la communication entre les différentes parties du système est efficace, fiable et sécurisée.
+                </p>
+                <p>
+                    Le MCC permet de :
+                    <ul>
+                        <li>
+                            Délimiter le domaine étudié
+                        </li>
+                        <li>
+                            Réduire la complexité en identifiant des sous problèmes traités individuellement
+                        </li>
+                        <li>
+                            Identifier les acteurs externes et internes
+                        </li>
+                        <li>
+                            Modélier les échanges d'informations entre les différents acteurs
+                        </li>
+                    </ul>
+                </p>
+
+                <div class="container">
+                    <img
+                    src="assets/images/schema-mcc.png"
+                    alt="schéma expliquant le modèle conceptuel de communication avec les acteurs internes et externes, les flux et l'organisation"
+                    class="schema"
+                    >
+                </div>
+            </div>
+
+            <!-- MOC -->
+            <div id="model-moc" class="models">
+                <h3>MOC (Modèle Organisationnel de Communication)</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+
+            <!-- MLC -->
+            <div id="model-mlc" class="models">
+                <h3>MLC (Modèle Logique de Communication)</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+
+            <!-- MPC -->
+            <div id="model-mpc" class="models">
+                <h3>MPC (Modèle Physique de Communication)</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+
+            <!-- MCD -->
+            <div id="model-mcd" class="models">
+                <h3>MCD (Modèle Conceptuel de Données) ou Modèle entités-relations</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+
+            <!-- MOD -->
+            <div id="model-mod" class="models">
+                <h3>MOD (Modèle Organisationnel de Données)</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+
+            <!-- MLD -->
+            <div id="model-mld" class="models">
+                <h3>MLD (Modèle Logique de Données)</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+
+            <!-- MPD -->
+            <div id="model-mpd" class="models">
+                <h3>MPD (Modèle Physique de Données)</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+
+            <!-- MCT -->
+            <div id="model-mct" class="models">
+                <h3>MCT (Modèle Conceptuel de Traitement)</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+
+            <!-- MOT -->
+            <div id="model-mot" class="models">
+                <h3>MOT (Modèle Organisationnel de Traitement)</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+
+            <!-- MLT -->
+            <div id="model-mlt" class="models">
+                <h3>MLT (Modèle Logique de Traitement)</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+
+            <!-- MPT -->
+            <div id="model-mpt" class="models">
+                <h3>MPT (Modèle Physique de Traitement)</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod praesentium provident ipsam a dignissimos sed magnam accusamus dolores mollitia? Ad officiis sunt tempore esse. Tenetur natus fugit quia recusandae.
+                    Rem sed delectus ad quia animi consectetur beatae tempora consequuntur assumenda dolorem hic fuga tempore, cumque quo officia cum minus velit magnam! Vel qui assumenda nobis cupiditate deserunt laudantium quaerat.
+                    Accusamus sint, nobis voluptates nemo a illum labore voluptatem libero animi iure perspiciatis odio mollitia deleniti maxime placeat illo odit, sunt doloribus voluptatibus. Nulla culpa voluptas repellat illo, alias voluptatibus!
+                    Ad minus similique neque a maiores quasi quae nobis quisquam eveniet magnam voluptates, optio sequi. Nemo libero dolores saepe est consequatur, provident inventore sequi facilis quasi delectus in, veniam consequuntur.
+                    Accusamus, libero quos. Aliquam, qui quia. Enim iure sapiente officiis ea placeat unde odit reprehenderit! Reiciendis dicta vitae unde eveniet non eligendi, deleniti sed quaerat aut nam, nobis laborum. Esse?
+                </p>
+            </div>
+        </section>
+    </main>    
+
+    <footer>
+
+    </footer>
+
+    <!-- Script -->
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
