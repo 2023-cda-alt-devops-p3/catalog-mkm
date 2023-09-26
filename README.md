@@ -105,7 +105,7 @@
 >
 > **Contenu**
 > - [ ] Détailler une méthode pour créer et utiliser chaque diagramme ou modèle
-> - [ ] Vérifier les informations sur les en croisant les informations de différentes sources
+> - [x] Vérifier les informations sur les en croisant les informations de différentes sources
 > - [ ] Citer les sources des images, liens, ...
 >
 > **Sécurité**
