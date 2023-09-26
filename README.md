@@ -1,4 +1,4 @@
-Site déployé : https://catalogue-de-diagrammes.netlify.app/
+:star: Le site est déployé sur [Netlify](https://catalogue-de-diagrammes.netlify.app/).
 
 # Liste des diagrammes contenus dans le catalogue
 
@@ -79,32 +79,34 @@ Site déployé : https://catalogue-de-diagrammes.netlify.app/
 - Features d'animations, transitions, barre de navigation => vérif du site
 - Design cohérent (couleur, forme, police)
 
+> [!IMPORTANT]
 > Checklist des critères d'évaluation
-**Git**
-- [x] Créer une branche "develop" pour le développement
-- [] Effectuer des pulls request de la branche en développement vers la branche principale
-- [] Versionner réguliérement, effectuer régulièrement des commits
-
-**SEO**
-- [] Utiliser des balises sémantiques (header, main, footer, ...)
-- [] Mettre en place les balises title et méta
-
-**Performance**
-- [] Tester son site web sur PageSpeed Insights
-
-**Accessibilité**
-- [] Tester son site pour l'accessibilité
-- [] Tester le contraste des couleurs
-- [] Vérifier que la taille des polices est supérieure à 16px
-
-**Architecture**
-- [] Utiliser des noms de classes, variables, ... logiques
-- [] Laisser des commentaires dans le code
-
-**Contenu**
-- [] Détailler une méthode pour créer et utiliser chaque diagramme ou modèle
-- [] Vérifier les informations sur les en croisant les informations de différentes sources
-- [] Citer les sources des images, liens, ...
-
-**Sécurité**
-- [] Utiliser des chemins absolus pour les fichiers, images, etc.
+>
+> **Git**
+> - [x] Créer une branche "develop" pour le développement
+> - [ ] Effectuer des pulls request de la branche en développement vers la branche principale
+> - [ ] Versionner réguliérement, effectuer régulièrement des commits
+>
+>**SEO**
+> - [ ] Utiliser des balises sémantiques (header, main, footer, ...)
+> - [ ] Mettre en place les balises title et méta
+>
+> **Performance**
+> - [ ] Tester son site web sur PageSpeed Insights
+>
+> **Accessibilité**
+> - [ ] Tester son site pour l'accessibilité
+> - [ ] Tester le contraste des couleurs
+> - [ ] Vérifier que la taille des polices est supérieure à 16px
+>
+> **Architecture**
+> - [ ] Utiliser des noms de classes, variables, ... logiques
+> - [ ] Laisser des commentaires dans le code
+>
+> **Contenu**
+> - [ ] Détailler une méthode pour créer et utiliser chaque diagramme ou modèle
+> - [ ] Vérifier les informations sur les en croisant les informations de différentes sources
+> - [ ] Citer les sources des images, liens, ...
+>
+> **Sécurité**
+> - [ ] Utiliser des chemins absolus pour les fichiers, images, etc.
