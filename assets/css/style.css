@@ -33,6 +33,11 @@ nav {
     flex-direction: column;
 }
 
+.logo {
+    color: white;
+    padding: 2rem 0;
+}
+
 .sidenav {
     height: 100%;
     width: 240px;
