@@ -10,12 +10,7 @@ function closeNav() {
 
 // Problème au niveau des comportements de scrolling : 
 // fin de scroll dans la barre de navigation -> mouvement de scroll dans le contenu de la page
-
-// document.getElementById('Sidenav').addEventListener('scroll', () => {
-//     document.querySelector('body').style.overflow = "hidden";
-// });
-
-var navbar = document.getElementById('Sidenav');
+let navbar = document.getElementById('Sidenav');
 
 navbar.addEventListener('scroll', function () {
   if (navbar.scrollTop + navbar.clientHeight >= navbar.scrollHeight) {
@@ -27,3 +22,25 @@ navbar.addEventListener('scroll', function () {
     document.body.style.overflow = 'auto';
   }
 });
+
+// Dropdown menu
+// Ouvrir le dropdown menu en cliquant sur l'icone "flèche"
+document.querySelectorAll('.drop-btn').forEach(function(element) {
+  element.addEventListener('click', function() {
+    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+      dropdown.style.display = 'block';
+    });
+  });
+});
+
+// Fermer le dropdown menu lorsque l'utilisateur clique en dehors du menu
+document.addEventListener('click', function(event) {
+  let dropdowns = document.querySelectorAll('.dropdown');
+  let buttons = document.querySelectorAll('.drop-btn');
+  for (let i = 0; i < dropdowns.length; i++) {
+    if (event.target !== dropdowns[i] && event.target !== buttons[i]) {
+      dropdowns[i].style.display = 'none';
+    }
+  }
+});
+
