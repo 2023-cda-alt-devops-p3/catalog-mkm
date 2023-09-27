@@ -84,15 +84,15 @@
 >
 > **Git**
 > - [x] Créer une branche "develop" pour le développement
-> - [ ] Effectuer des pulls request de la branche en développement vers la branche principale
-> - [ ] Versionner réguliérement, effectuer régulièrement des commits
+> - [x] Effectuer des pulls request de la branche en développement vers la branche principale
+> - [x] Versionner réguliérement, effectuer régulièrement des commits
 >
 >**SEO**
-> - [ ] Utiliser des balises sémantiques (header, main, footer, ...)
-> - [ ] Mettre en place les balises title et méta
+> - [x] Utiliser des balises sémantiques (header, main, footer, ...)
+> - [x] Mettre en place les balises title et méta
 >
 > **Performance**
-> - [ ] Tester son site web sur PageSpeed Insights
+> - [x] Tester son site web sur PageSpeed Insights
 >
 > **Accessibilité**
 > - [ ] Tester son site pour l'accessibilité
@@ -101,12 +101,12 @@
 >
 > **Architecture**
 > - [ ] Utiliser des noms de classes, variables, ... logiques
-> - [ ] Laisser des commentaires dans le code
+> - [x] Laisser des commentaires dans le code
 >
 > **Contenu**
 > - [ ] Détailler une méthode pour créer et utiliser chaque diagramme ou modèle
 > - [x] Vérifier les informations sur les en croisant les informations de différentes sources
-> - [ ] Citer les sources des images, liens, ...
+> - [x] Citer les sources des images, liens, ...
 >
 > **Sécurité**
 > - [ ] Utiliser des chemins absolus pour les fichiers, images, etc.

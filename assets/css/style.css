@@ -21,6 +21,7 @@ p {
 a:link, a:visited {
     text-decoration: none;
     cursor: pointer;
+    color : #37279C;
 }
 
 ul, ol {

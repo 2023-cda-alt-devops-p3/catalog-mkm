@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Application web regroupant les diagrammes uml et les modèles utilisant la méthode MERISE">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen">
     <!-- Fontawesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -173,6 +174,11 @@
                             </a>
                         </li> -->
                         <li>
+                            <a href="#model-mct" target="_self" rel="noopener noreferrer">
+                                MCT (Modèle Conceptuel de Traitement)
+                            </a>
+                        </li>
+                        <li>
                             <a href="#model-mld" target="_self" rel="noopener noreferrer">
                                 MLD (Modèle Logique de Données)
                             </a>
@@ -182,11 +188,6 @@
                                 MPD (Modèle Physique de Données)
                             </a>
                         </li>
-                        <!-- <li>
-                            <a href="#model-mct" target="_self" rel="noopener noreferrer">
-                                MCT (Modèle Conceptuel de Traitement)
-                            </a>
-                        </li> -->
                         <!-- <li>
                             <a href="#model-mot" target="_self" rel="noopener noreferrer">
                                 MOT (Modèle Organisationnel de Traitement)
@@ -1218,6 +1219,7 @@
                     Le MCC est utilisé pour identifier les besoins de communication du système et pour concevoir les canaux et protocoles de communication qui seront utilisés pour transférer les données entre les différents processus ou composants.
                     C'est un élément important de la méthode MERISE, car il permet de s'assurer que la communication entre les différentes parties du système est efficace, fiable et sécurisée.
                 </p>
+
                 <p>
                     Le MCC permet de :
                     <ul>
@@ -1238,11 +1240,45 @@
 
                 <div class="container">
                     <img
-                    src="assets/images/schema-mcc.png"
-                    alt="schéma expliquant le modèle conceptuel de communication avec les acteurs internes et externes, les flux et l'organisation"
+                    src="assets/images/model-mcc.png"
+                    alt=" Exemple de validation d'un dossier de scolarité"
                     class="schema"
                     >
+                        
+                    <figcaption>
+                        Exemple de validation d'un dossier de scolarité, extrait de la
+                            <a href="https://slides.com/idbrahimdev/la-methode-merise#/37" target="_blank">
+                                présentation
+                            </a>
+                    </figcaption>
                 </div>
+
+                <p>
+                    Pour créer un Modèle Conceptuel de Communication (MCC), vous pouvez suivre ces étapes :
+                    <ol>
+                        <li>
+                            Identifier les différents acteurs impliqués dans le système, y compris les entités externes et les processus internes.
+                        </li>
+                        <li>
+                            Déterminer les différents canaux de communication entre les acteurs.
+                        </li>
+                        <li>
+                            Définir les données échangées entre les acteurs à travers les canaux de communication.
+                        </li>
+                        <li>
+                            Dessinez un diagramme de contexte pour représenter l'ensemble du système et ses entités externes.
+                        </li>
+                        <li>
+                            Décomposez le diagramme de contexte en composants plus petits à l'aide du MCC.
+                        </li>
+                        <li>
+                            Dessinez le diagramme MCC, y compris les acteurs, les canaux de communication et les données échangées entre eux.
+                        </li>
+                        <li>
+                            Validez le diagramme MCC en vérifiant qu'il représente fidèlement le flux de communication du système.
+                        </li>
+                    </ol>
+                </p>
             </div>
 
             <!-- MCD *-->
@@ -1307,12 +1343,28 @@
                         </li>
                     </ul>
                 </p>
+
                 <p>
                     Le MCT est souvent utilisé conjointement avec d'autres composants de la méthode MERISE, tels que le <strong>Modèle Conceptuel de Données (MCD)</strong> et le <strong>Modèle Conceptuel de Communication (MCC)</strong>.
                     Ensemble, ces composants permettent de s'assurer que le système d'information est conçu pour répondre aux exigences fonctionnelles et non fonctionnelles du système.
                     Le MCT est un "zoom" sur le MCC : dans le MCC, les messages échangés entre les acteurs sont représentés alors que dans le MCT, on représente comment un acteur de l'organsiation réagit quand il reçoit ce message et quelle opération il effectue.
                 </p>
-                <br>
+
+                <div class="container">
+                    <img
+                    src="assets/images/model-mct.png"
+                    alt=" Exemple de validation d'un dossier de scolarité"
+                    class="schema"
+                    >
+                        
+                    <figcaption>
+                        Exemple de validation d'un dossier de scolarité, extrait de la
+                            <a href="https://slides.com/idbrahimdev/la-methode-merise#/37" target="_blank">
+                                présentation
+                            </a>
+                    </figcaption>
+                </div>
+
                 <p>
                     La création d'un Modèle Conceptuel de Traitement (MCT) peut se faire en suivant les étapes suivantes :
                     <ol>
@@ -1399,7 +1451,40 @@
             <div id="model-mpd" class="models">
                 <h3>MPD (Modèle Physique de Données)</h3>
                 <p>
-                    Le modèle physique des données (MPD) est la traduction du modèle logique des données (MLD) dans une structure de données spécifique au système de gestion de bases de données (SGBD) utilisé.
+                    Le Modèle Physique des Données (MPD) est utilisé pour représenter la structure des données dans un système de gestion de base de données.
+                    Le MPD est la dernière étape de la méthode MERISE et est créé après le Modèle Logique de Données (MLD).
+                    Le MPD représente l'implémentation réelle de la base de données et inclut des détails tels que les types de données, les contraintes et les relations entre les tables.
+                    Il est utilisé par les administrateurs de base de données et les développeurs pour créer le schéma de base de données physique et pour générer le code SQL pour créer la base de données.
+                </p>
+                <p>
+                    En résumé, le Modèle Physique des Données (MPD) est la traduction du Modèle Logique des Monnées (MLD) dans une structure de données spécifique au système de gestion de bases de données (SGBD) utilisé.
+                </p>
+                
+                <p>
+                    Pour créer un Modèle Physique des Données (MPD), vous pouvez suivre ces étapes :
+                    <ol>
+                        <li>
+                            Identifiez les entités et les attributs du système.
+                        </li>
+                        <li>
+                            Déterminez les relations entre les entités.
+                        </li>
+                        <li>
+                            Normalisez les données pour éliminer la redondance et améliorer l'intégrité des données.
+                        </li>
+                        <li>
+                            Créez une table pour chaque entité, y compris les attributs et la clé primaire.
+                        </li>
+                        <li>
+                            Définissez les relations entre les tables à l'aide de clés étrangères.
+                        </li>
+                        <li>
+                            Ajoutez toutes les contraintes nécessaires, telles que les contraintes uniques ou non nulles.
+                        </li>
+                        <li>
+                            Validez le MPD en vérifiant qu'il représente fidèlement la structure de données du système.
+                        </li>
+                    </ol>
                 </p>
             </div>
         </section>
