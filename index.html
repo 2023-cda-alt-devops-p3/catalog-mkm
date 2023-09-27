@@ -1219,6 +1219,7 @@
                     Le MCC est utilisé pour identifier les besoins de communication du système et pour concevoir les canaux et protocoles de communication qui seront utilisés pour transférer les données entre les différents processus ou composants.
                     C'est un élément important de la méthode MERISE, car il permet de s'assurer que la communication entre les différentes parties du système est efficace, fiable et sécurisée.
                 </p>
+
                 <p>
                     Le MCC permet de :
                     <ul>
@@ -1244,6 +1245,33 @@
                     class="schema"
                     >
                 </div>
+
+                <p>
+                    Pour créer un Modèle Conceptuel de Communication (MCC), vous pouvez suivre ces étapes :
+                    <ol>
+                        <li>
+                            Identifier les différents acteurs impliqués dans le système, y compris les entités externes et les processus internes.
+                        </li>
+                        <li>
+                            Déterminer les différents canaux de communication entre les acteurs.
+                        </li>
+                        <li>
+                            Définir les données échangées entre les acteurs à travers les canaux de communication.
+                        </li>
+                        <li>
+                            Dessinez un diagramme de contexte pour représenter l'ensemble du système et ses entités externes.
+                        </li>
+                        <li>
+                            Décomposez le diagramme de contexte en composants plus petits à l'aide du MCC.
+                        </li>
+                        <li>
+                            Dessinez le diagramme MCC, y compris les acteurs, les canaux de communication et les données échangées entre eux.
+                        </li>
+                        <li>
+                            Validez le diagramme MCC en vérifiant qu'il représente fidèlement le flux de communication du système.
+                        </li>
+                    </ol>
+                </p>
             </div>
 
             <!-- MCD *-->
@@ -1400,7 +1428,40 @@
             <div id="model-mpd" class="models">
                 <h3>MPD (Modèle Physique de Données)</h3>
                 <p>
-                    Le modèle physique des données (MPD) est la traduction du modèle logique des données (MLD) dans une structure de données spécifique au système de gestion de bases de données (SGBD) utilisé.
+                    Le Modèle Physique des Données (MPD) est utilisé pour représenter la structure des données dans un système de gestion de base de données.
+                    Le MPD est la dernière étape de la méthode MERISE et est créé après le Modèle Logique de Données (MLD).
+                    Le MPD représente l'implémentation réelle de la base de données et inclut des détails tels que les types de données, les contraintes et les relations entre les tables.
+                    Il est utilisé par les administrateurs de base de données et les développeurs pour créer le schéma de base de données physique et pour générer le code SQL pour créer la base de données.
+                </p>
+                <p>
+                    En résumé, le Modèle Physique des Données (MPD) est la traduction du Modèle Logique des Monnées (MLD) dans une structure de données spécifique au système de gestion de bases de données (SGBD) utilisé.
+                </p>
+                
+                <p>
+                    Pour créer un Modèle Physique des Données (MPD), vous pouvez suivre ces étapes :
+                    <ol>
+                        <li>
+                            Identifiez les entités et les attributs du système.
+                        </li>
+                        <li>
+                            Déterminez les relations entre les entités.
+                        </li>
+                        <li>
+                            Normalisez les données pour éliminer la redondance et améliorer l'intégrité des données.
+                        </li>
+                        <li>
+                            Créez une table pour chaque entité, y compris les attributs et la clé primaire.
+                        </li>
+                        <li>
+                            Définissez les relations entre les tables à l'aide de clés étrangères.
+                        </li>
+                        <li>
+                            Ajoutez toutes les contraintes nécessaires, telles que les contraintes uniques ou non nulles.
+                        </li>
+                        <li>
+                            Validez le MPD en vérifiant qu'il représente fidèlement la structure de données du système.
+                        </li>
+                    </ol>
                 </p>
             </div>
         </section>
