@@ -95,7 +95,7 @@
 > - [x] Tester son site web sur PageSpeed Insights
 >
 > **Accessibilité**
-> - [ ] Tester son site pour l'accessibilité
+> - [x] Tester son site pour l'accessibilité
 > - [ ] Tester le contraste des couleurs
 > - [ ] Vérifier que la taille des polices est supérieure à 16px
 >
@@ -104,9 +104,9 @@
 > - [x] Laisser des commentaires dans le code
 >
 > **Contenu**
-> - [ ] Détailler une méthode pour créer et utiliser chaque diagramme ou modèle
+> - [x] Détailler une méthode pour créer et utiliser chaque diagramme ou modèle
 > - [x] Vérifier les informations sur les en croisant les informations de différentes sources
 > - [x] Citer les sources des images, liens, ...
 >
 > **Sécurité**
-> - [ ] Utiliser des chemins absolus pour les fichiers, images, etc.
+> - [x] Utiliser des chemins absolus pour les fichiers, images, etc.
