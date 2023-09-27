@@ -103,7 +103,8 @@ main, header {
 }
 
 .schema {
-    width: 60%;
+    height: auto;
+    width: 50%;
     padding-bottom: 5px;
 }
 
@@ -127,6 +128,10 @@ main, header {
     /* General setting */
     main, header {
         margin : 1rem;
+    }
+
+    .schema {
+        width: 100%;
     }
 
     /* Navigation */
