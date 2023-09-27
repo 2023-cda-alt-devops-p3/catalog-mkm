@@ -103,6 +103,7 @@ main, header {
 
 .schema {
     width: 60%;
+    padding-bottom: 5px;
 }
 
 .diagrams, .models {
