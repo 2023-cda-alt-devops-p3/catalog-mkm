@@ -35,7 +35,7 @@
 ---
 ### Axes d'améliorations :
 - transformer le script qui gère les comportements de scrolling des éléments en utilisant des propriétés CSS, pour des raisons d'éco-conception
-- ajouter un niveau dans la navigation pour optimiser l'accessibilité
+- mettre en place un mode actif sur le diagramme ou modèle choisi par l'utisateur, dans la barre de navigation (lorsque le sous-menu est ouvert)
 
 ---
 # Critères d'évaluation
@@ -93,20 +93,25 @@
 >
 > **Performance**
 > - [x] Tester son site web sur PageSpeed Insights
+> - [ ] Limiter le nombre de requêtes
 >
 > **Accessibilité**
 > - [x] Tester son site pour l'accessibilité
 > - [ ] Tester le contraste des couleurs
-> - [ ] Vérifier que la taille des polices est supérieure à 16px
+> - [ ] Ne pas utiliser plus de 3 couleurs maximum pour le design (sauf dégradé)
+> - [x] Vérifier que la taille des polices est supérieure à 16px
 >
 > **Architecture**
-> - [ ] Utiliser des noms de classes, variables, ... logiques
+> - [x] Utiliser des balises de structures (header, body, footer, main, ...)
+> - [ ] Respecter les conventions de nommage pour les classes, les ID, etc.
 > - [x] Laisser des commentaires dans le code
+> - [] Eviter les répétitions en utilisant des fonctions
 >
 > **Contenu**
 > - [x] Détailler une méthode pour créer et utiliser chaque diagramme ou modèle
 > - [x] Vérifier les informations sur les en croisant les informations de différentes sources
 > - [x] Citer les sources des images, liens, ...
+> - [x] Passer le code au W3C validator
 >
 > **Sécurité**
 > - [x] Utiliser des chemins absolus pour les fichiers, images, etc.
