@@ -11,7 +11,9 @@ h1, h2 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0.5rem 0;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 2rem;
+    margin: 1rem 0;
 }
 
 p {
@@ -40,6 +42,7 @@ nav {
 }
 
 .sidenav {
+    display: none;
     height: 100%;
     width: 240px;
     position: fixed;
@@ -71,15 +74,16 @@ nav {
     text-align: center;
 }
 
-.dropdown {
-    display: none;
+.sidenav-responsive{
+    display: block;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: end;
 }
 
 .close-btn{
-    display: none;
-}
-.sidenav-responsive{
-    display: none;
+    display: block;
 }
 
 /* Page content */
@@ -88,7 +92,7 @@ body{
 }
 
 main, header {
-    margin-left: 240px;
+    margin : 1rem;
     padding: 1rem;
     text-align: justify;
 }
@@ -103,7 +107,7 @@ main, header {
 }
 
 .schema {
-    width: 50%;
+    width: 100%;
     padding-bottom: 5px;
 }
 
@@ -122,31 +126,27 @@ main, header {
 
 /* Responsive */
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
 
-    /* General setting */
+    /* Page content */
     main, header {
-        margin : 1rem;
+        margin-left: 240px;
     }
 
     .schema {
-        width: 100%;
+        width : 50%;
     }
 
     /* Navigation */
-    .sidenav{
-        display: none
+    .sidenav {
+        display: block;
     }
     
-    .sidenav-responsive{
-        display: block;
-        width: 100%;
-        background-color: #111;
-        display: flex;
-        justify-content: end;
+    .close-btn{
+        display: none;
     }
 
-    .close-btn{
-        display: block;
+    .sidenav-responsive{
+        display: none;
     }
 }
