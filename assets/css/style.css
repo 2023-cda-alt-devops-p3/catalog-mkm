@@ -4,20 +4,19 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h1, h2 {
-    font-size: 1.5rem;
+    line-height: 30px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Patrick Hand SC', cursive;
     font-size: 2rem;
     margin: 1rem 0;
+    text-align: center;
 }
 
 p {
     padding-top: 0.5rem;
+    font-size: 17px;
 }
 
 a:link, a:visited {
@@ -131,6 +130,10 @@ main, header {
     /* Page content */
     main, header {
         margin-left: 240px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-align: left;
     }
 
     .schema {
