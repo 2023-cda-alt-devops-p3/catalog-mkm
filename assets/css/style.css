@@ -110,6 +110,10 @@ main, header {
     padding-bottom: 5px;
 }
 
+.note {
+    display: none;
+}
+
 .diagrams, .models {
     margin:  6px 0 6px 0;
 }
@@ -138,6 +142,15 @@ main, header {
 
     .schema {
         width : 50%;
+    }
+
+    .schema:hover{
+        transform: scale(1.4);
+        transition-duration: 1.5s;
+    }
+
+    .note {
+        display: block;
     }
 
     /* Navigation */
